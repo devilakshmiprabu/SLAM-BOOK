@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Animation</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: relative;
+            animation-name: b;
+            animation-duration:5s;
+            margin-top: 100px;
+            margin-right: 100px;
+           animation-direction: alternate-reverse;
+        }
+
+        @keyframes b {
+            0% {
+                top: 0;
+                left: 0;
+                background-color: aqua;
+            }
+            25% {
+                top: 0;
+                left: 200px;
+                background-color: black;
+            }
+            50% {
+                top: 200px;
+                left: 200px;
+                background-color: blue;
+            }
+            75% {
+                top: 200px;
+                left: 0;
+                background-color: brown;
+            }
+            100% {
+                top: 0;
+                left: 0;
+                background-color: hotpink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="box"></div>
+    </center>
+</body>
+</html>

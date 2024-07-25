@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Animation</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: relative;
+            animation-name: b;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            margin-top: 100px;
+        }
+
+        @keyframes b {
+            0% {
+                top: 0;
+                left: 0;
+                background-color: aqua;
+            }
+            25% {
+                top: 0;
+                left: 200px;
+                background-color: black;
+            }
+            50% {
+                top: 200px;
+                left: 200px;
+                background-color: blue;
+            }
+            75% {
+                top: 200px;
+                left: 0;
+                background-color: brown;
+            }
+            100% {
+                top: 0;
+                left: 0;
+                background-color: hotpink;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .box {
+                width: 30px;
+                height: 30px;
+            }
+            @keyframes b {
+                25% {
+                    left: 100px;
+                }
+                50% {
+                    top: 100px;
+                    left: 100px;
+                }
+                75% {
+                    top: 100px;
+                    left: 0;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="box" onclick="toggleAnimation()"></div>
+    </center>
+    <script>
+        function toggleAnimation() {
+            const box = document.querySelector('.box');
+            if (box.style.animationPlayState === 'paused') {
+                box.style.animationPlayState = 'running';
+            } else {
+                box.style.animationPlayState = 'paused';
+            }
+        }
+    </script>
+</body>
+</html>

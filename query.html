@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: brown;
+        }
+
+        @media print {
+            h1 {
+                color: black;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            h1 {
+                color: aqua;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                color: gold;
+            }
+        }
+
+        .box {
+            width: 80%;
+            max-width: 1200px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: brown;
+            transition: background-color 0.3s ease;
+        }
+
+        .medium-box {
+            max-width: 700px;
+            background-color: rgb(69, 231, 55);
+        }
+
+        .small-box {
+            max-width: 300px;
+            background-color: rgb(216, 88, 56);
+        }
+
+        @media screen and (min-width: 1000px) {
+            .box {
+                background-color: aqua;
+            }
+        }
+
+        @media screen and (min-width: 2000px) {
+            .box {
+                background-color: rgb(33, 8, 73);
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .medium-box {
+                background-color: rgb(238, 12, 12);
+            }
+        }
+
+        @media screen and (max-width: 1500px) {
+            .medium-box {
+                background-color: rgb(33, 8, 73);
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .small-box {
+                background-color: rgba(2, 3, 3, 0.034);
+            }
+        }
+
+        @media screen and (max-width: 2000px) {
+            .small-box {
+                background-color: rgb(141, 228, 162);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <div class="box"></div>
+    <div class="box medium-box"></div>
+    <div class="box small-box"></div>
+</body>
+</html>
